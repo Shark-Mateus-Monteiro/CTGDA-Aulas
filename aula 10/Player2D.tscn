@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://o4ag41quxogr"]
+
+[ext_resource type="Texture2D" uid="uid://u210sytktfbd" path="res://Assets/idle.png" id="1_5ogqr"]
+[ext_resource type="Script" path="res://PlayerController.cs" id="1_nvc22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xs76o"]
+size = Vector2(19, 48)
+
+[node name="Player" type="CharacterBody2D"]
+rotation = -0.00180619
+script = ExtResource("1_nvc22")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(151, 266)
+scale = Vector2(1.76, 1.92857)
+texture = ExtResource("1_5ogqr")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(150.5, 269)
+shape = SubResource("RectangleShape2D_xs76o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 323)
