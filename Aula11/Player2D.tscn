@@ -1,0 +1,211 @@
+[gd_scene load_steps=30 format=3 uid="uid://o4ag41quxogr"]
+
+[ext_resource type="Texture2D" uid="uid://u210sytktfbd" path="res://Assets/idle.png" id="1_5ogqr"]
+[ext_resource type="Script" path="res://PlayerController.cs" id="1_nvc22"]
+[ext_resource type="Texture2D" uid="uid://bjijmchft005f" path="res://Assets/jump.png" id="3_g70wp"]
+[ext_resource type="Texture2D" uid="uid://djo5jsc6flog8" path="res://Assets/attack.png" id="4_l50pi"]
+[ext_resource type="Texture2D" uid="uid://duhrgdfyi0igt" path="res://Assets/walk.png" id="5_a5asi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xs76o"]
+size = Vector2(19, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cogy"]
+atlas = ExtResource("3_g70wp")
+region = Rect2(0, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjjnf"]
+atlas = ExtResource("3_g70wp")
+region = Rect2(50, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t8iy"]
+atlas = ExtResource("3_g70wp")
+region = Rect2(100, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6v8w"]
+atlas = ExtResource("3_g70wp")
+region = Rect2(150, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl303"]
+atlas = ExtResource("3_g70wp")
+region = Rect2(200, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0tsx"]
+atlas = ExtResource("3_g70wp")
+region = Rect2(250, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j34v4"]
+atlas = ExtResource("3_g70wp")
+region = Rect2(300, 0, 50, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exqp7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cogy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjjnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t8iy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6v8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl303")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0tsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j34v4")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhef6"]
+atlas = ExtResource("4_l50pi")
+region = Rect2(0, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh06o"]
+atlas = ExtResource("4_l50pi")
+region = Rect2(50, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8un1k"]
+atlas = ExtResource("4_l50pi")
+region = Rect2(100, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2e45"]
+atlas = ExtResource("4_l50pi")
+region = Rect2(150, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaik6"]
+atlas = ExtResource("4_l50pi")
+region = Rect2(200, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yi4f"]
+atlas = ExtResource("4_l50pi")
+region = Rect2(250, 0, 50, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpgbo"]
+atlas = ExtResource("4_l50pi")
+region = Rect2(300, 0, 50, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6fad"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhef6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh06o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8un1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2e45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaik6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yi4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpgbo")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7wjy"]
+atlas = ExtResource("5_a5asi")
+region = Rect2(0, 0, 48, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18d25"]
+atlas = ExtResource("5_a5asi")
+region = Rect2(48, 0, 48, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmeru"]
+atlas = ExtResource("5_a5asi")
+region = Rect2(96, 0, 48, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68jfm"]
+atlas = ExtResource("5_a5asi")
+region = Rect2(144, 0, 48, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orr23"]
+atlas = ExtResource("5_a5asi")
+region = Rect2(192, 0, 48, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pkma"]
+atlas = ExtResource("5_a5asi")
+region = Rect2(240, 0, 48, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xk3oh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7wjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18d25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmeru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68jfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orr23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pkma")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+rotation = -0.00180619
+script = ExtResource("1_nvc22")
+
+[node name="Idle" type="Sprite2D" parent="."]
+position = Vector2(151, 266)
+scale = Vector2(1.76, 1.92857)
+texture = ExtResource("1_5ogqr")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(150.5, 269)
+shape = SubResource("RectangleShape2D_xs76o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575.703, 165.04)
+
+[node name="JumpSprite" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(147.534, 258.267)
+scale = Vector2(1.193, 1.929)
+sprite_frames = SubResource("SpriteFrames_exqp7")
+animation = &"jump"
+
+[node name="AttackSprite" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(149.525, 263.27)
+scale = Vector2(1.4044, 1.9709)
+sprite_frames = SubResource("SpriteFrames_n6fad")
+animation = &"attack"
+
+[node name="WalkSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(158.519, 266.287)
+scale = Vector2(1.18502, 1.97148)
+sprite_frames = SubResource("SpriteFrames_xk3oh")
+animation = &"walk"
