@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c55pq63sxon1f"]
+
+[ext_resource type="Script" path="res://Collectible.cs" id="1_2fwxo"]
+[ext_resource type="Texture2D" uid="uid://dp4x1ah4osatj" path="res://Assets/coin.png" id="1_f5u5a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nusia"]
+size = Vector2(44.25, 45.5)
+
+[node name="Collectible" type="Area2D"]
+script = ExtResource("1_2fwxo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.5, 9)
+scale = Vector2(1.24286, 1.25714)
+texture = ExtResource("1_f5u5a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 10)
+shape = SubResource("RectangleShape2D_nusia")

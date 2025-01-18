@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jogo de Plataforma 2D", "Jogo de Plataforma 2D.csproj", "{B0043B4D-7788-4081-9BF9-62F99C03481F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0043B4D-7788-4081-9BF9-62F99C03481F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0043B4D-7788-4081-9BF9-62F99C03481F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0043B4D-7788-4081-9BF9-62F99C03481F}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{B0043B4D-7788-4081-9BF9-62F99C03481F}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{B0043B4D-7788-4081-9BF9-62F99C03481F}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{B0043B4D-7788-4081-9BF9-62F99C03481F}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
