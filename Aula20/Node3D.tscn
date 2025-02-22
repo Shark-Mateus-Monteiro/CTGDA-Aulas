@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://dhi7eg8oyxnsf"]
+
+[ext_resource type="Texture2D" uid="uid://xd4xfadtmbbe" path="res://icon.svg" id="1_4uusy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_323r2"]
+size = Vector3(99.8739, 0.278107, 98.8703)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3bqt"]
+albedo_texture = ExtResource("1_4uusy")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ifp86"]
+size = Vector3(100, 0.1, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ak8m6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tg744"]
+size = Vector3(1, 1.12292, 1)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_plrmm"]
+
+[sub_resource type="Sky" id="Sky_airgv"]
+sky_material = SubResource("PanoramaSkyMaterial_plrmm")
+
+[sub_resource type="Environment" id="Environment_rv0ca"]
+background_mode = 2
+background_color = Color(0.610174, 0.719391, 0.981229, 1)
+sky = SubResource("Sky_airgv")
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00396347, -0.127213, -0.162987)
+shape = SubResource("BoxShape3D_323r2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+material_override = SubResource("StandardMaterial3D_c3bqt")
+mesh = SubResource("BoxMesh_ifp86")
+skeleton = NodePath("../..")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111557, 0.469177, 25.8655)
+mesh = SubResource("BoxMesh_ak8m6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.076046, 0.33255, 26.1299)
+shape = SubResource("BoxShape3D_tg744")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.52101, 0.853551, 0, -0.853551, 0.52101, 0.418137, 3.9702, 27.9298)
+fov = 179.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rv0ca")
