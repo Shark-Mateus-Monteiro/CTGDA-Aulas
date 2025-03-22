@@ -1,0 +1,75 @@
+[gd_scene load_steps=13 format=3 uid="uid://ctkyb7v0kyxuk"]
+
+[ext_resource type="PackedScene" uid="uid://8otaxe66rs03" path="res://stone_large_b.tscn" id="1_c8ves"]
+[ext_resource type="Texture2D" uid="uid://bhtqttp5riqs2" path="res://Assets/sunflowers_puresky_4k(1).exr" id="1_eow5y"]
+[ext_resource type="PackedScene" uid="uid://b25fo4ng6axoj" path="res://rock_large_a.tscn" id="3_7kx0d"]
+[ext_resource type="PackedScene" uid="uid://qq2hsocrj4q6" path="res://stone_large_a.tscn" id="4_tkwaf"]
+[ext_resource type="PackedScene" uid="uid://cejqubd6fn2cg" path="res://rock_small_a.tscn" id="5_73cgd"]
+[ext_resource type="PackedScene" uid="uid://cpwxrd764fxpr" path="res://Player.tscn" id="6_i15na"]
+[ext_resource type="PackedScene" uid="uid://dk4cexxw5ixyi" path="res://tree_small_2.tscn" id="7_o5el0"]
+[ext_resource type="PackedScene" uid="uid://u1bhitos8ars" path="res://tree_default.tscn" id="8_ghnmy"]
+[ext_resource type="PackedScene" uid="uid://c7peflyh6ev45" path="res://tree_fat.tscn" id="9_7i61i"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xww5y"]
+panorama = ExtResource("1_eow5y")
+
+[sub_resource type="Sky" id="Sky_o5ads"]
+sky_material = SubResource("PanoramaSkyMaterial_xww5y")
+
+[sub_resource type="Environment" id="Environment_gklnf"]
+background_mode = 2
+background_color = Color(0, 0.423529, 0.984314, 1)
+sky = SubResource("Sky_o5ads")
+
+[node name="World" type="Node3D"]
+
+[node name="stone_largeB" parent="." instance=ExtResource("1_c8ves")]
+transform = Transform3D(6.17692, 0, 0, 0, 1.30865, 0, 0, 0, 3.62136, 0.815158, -0.710425, 0.340717)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gklnf")
+
+[node name="rock_largeA" parent="." instance=ExtResource("3_7kx0d")]
+transform = Transform3D(1.96347, 0, 0, 0, 1.2147, 0, 0, 0, 2.68082, 0, -0.238595, 0)
+
+[node name="stone_largeA" parent="." instance=ExtResource("4_tkwaf")]
+transform = Transform3D(4.81289, 0, 0, 0, 1, 0, 0, 0, 3.56968, -0.281771, -0.402233, -0.512653)
+
+[node name="stone_largeA2" parent="." instance=ExtResource("4_tkwaf")]
+transform = Transform3D(3.33594, 0, 0, 0, 0.983819, 0, 0, 0, 2.19076, 0.465295, -0.491141, -1.45987)
+
+[node name="rock_smallA" parent="." instance=ExtResource("5_73cgd")]
+transform = Transform3D(4.74738, 0, 0, 0, 1.05183, 0, 0, 0, 4.71208, 0.725062, -0.145129, 0)
+
+[node name="rock_smallA2" parent="." instance=ExtResource("5_73cgd")]
+transform = Transform3D(2.67362, 0, 0, 0, 1.20912, 0, 0, 0, 3.01273, 0.668049, -0.213354, -0.675654)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("6_i15na")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.158308, 0)
+
+[node name="tree_small2" parent="." instance=ExtResource("7_o5el0")]
+transform = Transform3D(0.802764, 0, 0, 0, 0.523164, 0, 0, 0, 0.806298, 0, 0.13718, 0.535738)
+
+[node name="tree_small3" parent="." instance=ExtResource("7_o5el0")]
+transform = Transform3D(0.635978, 0, 0, 0, 0.425311, 0, 0, 0, 0.627163, 0.206478, 0.076984, -0.328629)
+
+[node name="tree_small4" parent="." instance=ExtResource("7_o5el0")]
+transform = Transform3D(0.737212, 0, 0, 0, 0.391214, 0, 0, 0, 0.600254, 0.663697, 0.0559814, 0.161517)
+
+[node name="rock_largeA2" parent="." instance=ExtResource("3_7kx0d")]
+transform = Transform3D(-1.05309, 0, 0.707386, 0, 0.759906, 0, -0.522554, 0, -1.42558, 1.59257, -0.227378, 0.35031)
+
+[node name="rock_largeA3" parent="." instance=ExtResource("3_7kx0d")]
+transform = Transform3D(-1.00178, 0, 0.769994, 0, 1, 0, -0.716328, 0, -1.07683, 0.77584, -0.284685, 1.10928)
+
+[node name="rock_smallA3" parent="." instance=ExtResource("5_73cgd")]
+transform = Transform3D(2.64604, 0, 0, 0, 1, 0, 0, 0, 2.06889, 1.1091, -0.165822, -0.404399)
+
+[node name="tree_default" parent="." instance=ExtResource("8_ghnmy")]
+transform = Transform3D(0.889304, 0, 0, 0, 0.55782, 0, 0, 0, 0.807373, 0.726561, -0.0248855, 1.02085)
+
+[node name="tree_fat" parent="." instance=ExtResource("9_7i61i")]
+transform = Transform3D(0.500752, 0, 0, 0, 0.299564, 0, 0, 0, 0.499499, 1.72141, -0.029954, 0.0733117)
+
+[node name="tree_fat2" parent="." instance=ExtResource("9_7i61i")]
+transform = Transform3D(0.500752, 0, 0, 0, 0.299564, 0, 0, 0, 0.499499, -0.339562, 0.119326, 0.180175)
