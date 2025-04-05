@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2vpcepogf58n"]
+
+[ext_resource type="PackedScene" uid="uid://cum20nbl566o7" path="res://Assets/Assets/Kits de plataforma/kenney_nature-kit/Models/DAE format/ground_grass.dae" id="1_xp8je"]
+
+[node name="ground_grass" instance=ExtResource("1_xp8je")]
