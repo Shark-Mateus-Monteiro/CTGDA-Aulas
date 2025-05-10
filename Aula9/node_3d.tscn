@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cij1abyrn5oyk"]
+
+[ext_resource type="Script" path="res://Plaayer3D.cs" id="1_ebeyp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0agof"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_itogq"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kwm4e"]
+top_radius = 0.0
+bottom_radius = 0.415
+height = 1.94
+
+[node name="Jogante" type="CharacterBody3D"]
+script = ExtResource("1_ebeyp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_0agof")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_itogq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45953, 0.947742)
+mesh = SubResource("CylinderMesh_kwm4e")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62079, 3.60032)
