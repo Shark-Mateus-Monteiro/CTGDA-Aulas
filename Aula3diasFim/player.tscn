@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://caid78cr7nbhi"]
+
+[ext_resource type="Script" path="res://PlayerControls.cs" id="1_sa6w7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n2nh3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ucwwg"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_sa6w7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_n2nh3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ucwwg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42491, 2.15018)
