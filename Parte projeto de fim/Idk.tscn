@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://r3wi6s8p33hv"]
+
+[ext_resource type="PackedScene" uid="uid://caid78cr7nbhi" path="res://player.tscn" id="1_t1utc"]
+[ext_resource type="PackedScene" uid="uid://b3vqhgxlj4t1r" path="res://teste.tscn" id="2_hyags"]
+[ext_resource type="PackedScene" uid="uid://bv61vjbw5us8e" path="res://zombie_idk.tscn" id="3_s4k3h"]
+
+[sub_resource type="Environment" id="Environment_cyypo"]
+background_mode = 1
+background_color = Color(0.483338, 0.649368, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_t1utc")]
+
+[node name="Node3D" parent="." instance=ExtResource("2_hyags")]
+transform = Transform3D(140.348, 0, 0, 0, 0.0190832, 0, 0, 0, 211.571, -0.835169, -1.31137, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cyypo")
+
+[node name="Zombie idk" parent="." instance=ExtResource("3_s4k3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7864, -0.639864, 4.37087)

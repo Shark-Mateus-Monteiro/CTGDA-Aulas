@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://caid78cr7nbhi"]
+
+[ext_resource type="Script" path="res://PlayerControls.cs" id="1_sa6w7"]
+[ext_resource type="Script" path="res://LifeLabel.cs" id="2_7nijr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n2nh3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ucwwg"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_sa6w7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_n2nh3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ucwwg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42491, 3.36631)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LifeLabel" type="Label" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 20.0
+offset_right = 58.0
+offset_bottom = 43.0
+text = "HP: "
+script = ExtResource("2_7nijr")
+
+[node name="Node3D" type="Node3D" parent="."]
