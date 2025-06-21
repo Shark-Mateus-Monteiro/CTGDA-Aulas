@@ -1,0 +1,638 @@
+[gd_scene load_steps=30 format=3 uid="uid://c6fha752onatc"]
+
+[ext_resource type="PackedScene" path="res://Importações/bridge_stoneRound.dae-d622c6e7124edaaf836d3e9f1d90d410.scn" id="1_2y7lp"]
+[ext_resource type="PackedScene" path="res://Importações/canoe_paddle.dae-604caf805d7633cf05460458c470dce7.scn" id="2_8ob1v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jl0lo"]
+albedo_color = Color(0.317979, 0.758208, 7.70092e-07, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbxf4"]
+material = SubResource("StandardMaterial3D_jl0lo")
+size = Vector3(14, 1, 15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_io7vv"]
+size = Vector3(14, 1, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gp6o4"]
+albedo_color = Color(0.655071, 0.302109, 0.0483603, 0.52549)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_h6iwq"]
+material = SubResource("StandardMaterial3D_gp6o4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i84ii"]
+albedo_color = Color(0.129412, 0.588235, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_d3ffr"]
+material = SubResource("StandardMaterial3D_i84ii")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5nbkm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_sl6ac"]
+material = SubResource("StandardMaterial3D_5nbkm")
+
+[sub_resource type="BoxMesh" id="BoxMesh_vnf0l"]
+size = Vector3(2, 10, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a52ks"]
+size = Vector3(4, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mg2cs"]
+albedo_color = Color(0.698039, 0.34902, 0.160784, 0.772549)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iltvi"]
+material = SubResource("StandardMaterial3D_mg2cs")
+size = Vector3(40, 1, 25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yfg1"]
+albedo_color = Color(0.337647, 0.299751, 0.230813, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eurwp"]
+material = SubResource("StandardMaterial3D_1yfg1")
+size = Vector3(35, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5jj3"]
+albedo_color = Color(0.337255, 0.298039, 0.231373, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8lgix"]
+material = SubResource("StandardMaterial3D_u5jj3")
+size = Vector3(40, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kd2u"]
+albedo_color = Color(0.479231, 0.428493, 0.342378, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eiodd"]
+material = SubResource("StandardMaterial3D_4kd2u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihte4"]
+albedo_color = Color(0.503185, 0.345261, 0.0893479, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5sxgq"]
+material = SubResource("StandardMaterial3D_ihte4")
+size = Vector3(0.5, 3, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i7rxo"]
+albedo_color = Color(0.501961, 0.345098, 0.0901961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bbh36"]
+material = SubResource("StandardMaterial3D_i7rxo")
+size = Vector3(0.5, 2, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ttf6r"]
+albedo_color = Color(0.337255, 0.298039, 0.231373, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ittki"]
+material = SubResource("StandardMaterial3D_ttf6r")
+size = Vector3(40, 1, 40)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ixpt6"]
+albedo_color = Color(0.337255, 0.298039, 0.231373, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ubtkm"]
+material = SubResource("StandardMaterial3D_ixpt6")
+size = Vector3(2.5, 2, 0.5)
+
+[node name="world" type="Node3D"]
+
+[node name="TEerra" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.229002, 0)
+
+[node name="terra" type="MeshInstance3D" parent="TEerra"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.114501, 0)
+mesh = SubResource("BoxMesh_tbxf4")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TEerra"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.118171, 0)
+shape = SubResource("BoxShape3D_io7vv")
+
+[node name="troco de arvore 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.86785, 0, 0, 0, 1, -5.32892, 2.51304, -7.07371)
+mesh = SubResource("CylinderMesh_h6iwq")
+
+[node name="troco de arvore 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.86785, 0, 0, 0, 1, -3.9544, 2.51304, 7.33859)
+mesh = SubResource("CylinderMesh_h6iwq")
+
+[node name="troco de arvore 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.86785, 0, 0, 0, 1, 4.70788, 2.51304, -3.51905)
+mesh = SubResource("CylinderMesh_h6iwq")
+
+[node name="troco de arvore 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.86785, 0, 0, 0, 1, 1.98246, 2.49172, 3.48883)
+mesh = SubResource("CylinderMesh_h6iwq")
+
+[node name="folhas de arvore 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.31323, 4.60432, -7.09726)
+mesh = SubResource("SphereMesh_d3ffr")
+
+[node name="folhas de arvore 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.60136, 4.60432, -3.65532)
+mesh = SubResource("SphereMesh_d3ffr")
+
+[node name="folhas de arvore 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.14195, 4.60432, 3.44325)
+mesh = SubResource("SphereMesh_d3ffr")
+
+[node name="folhas de arvore 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.95494, 4.60432, 7.55268)
+mesh = SubResource("SphereMesh_d3ffr")
+
+[node name="parkour 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.9596)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.8322)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7769, 0, 25.8268)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32636, 0, 28.3681)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.153044, 0.576482, 29.8164)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87506, 1.16852, 32.4325)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.252602, 1.67212, 35.0636)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.94032, 0, 0, 0, 0.663141, 0, 0, 0, 1, 0.00837684, 1.67212, 39.0526)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 9" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0178128, 0, 0.999958, 0, 0.663141, 0, -1.94024, 0, -0.00918034, -1.49977, 2.72685, 40.6185)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.94032, 0, 0, 0, 0.663141, 0, 0, 0, 1, 0.00837684, 3.94751, 42.0337)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 11" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0178128, 0, 0.999958, 0, 0.663141, 0, -1.94024, 0, -0.00918034, 1.49521, 5.18993, 40.6185)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 12" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.94032, 0, 0, 0, 0.663141, 0, 0, 0, 1, 0.00837684, 6.57175, 39.0526)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 13" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0178128, 0, 0.999958, 0, 0.663141, 0, -1.94024, 0, -0.00918034, -1.49977, 7.86091, 40.6185)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 14" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.252602, 8.40792, 43.5164)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 15" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.252602, 8.40792, 46.4233)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 16" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.252602, 8.40792, 49.4378)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="parkour 17" type="MeshInstance3D" parent="."]
+transform = Transform3D(11.1883, 0, 0, 0, 1, 0, 0, 0, 5.99252, 0.252602, 8.40792, 55.9736)
+mesh = SubResource("BoxMesh_sl6ac")
+
+[node name="tronco do parkour" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.172279, 3.95015, 40.4903)
+mesh = SubResource("BoxMesh_vnf0l")
+
+[node name="blocos" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.9339)
+mesh = SubResource("BoxMesh_a52ks")
+
+[node name="blocos 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21.3095)
+mesh = SubResource("BoxMesh_a52ks")
+
+[node name="blocos 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.69985, 0, -0.714289, 0, 1, 0, 0.714289, 0, 0.69985, 26.7701, 0, -22.7504)
+mesh = SubResource("BoxMesh_a52ks")
+
+[node name="blocos de inimigos 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0837, 0, -38.5846)
+mesh = SubResource("BoxMesh_iltvi")
+
+[node name="blocos de inimigos 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.00253073, 0, 0.999997, 0, 1, 0, -0.999997, 0, -0.00253073, 42.5692, 0, -31.1201)
+mesh = SubResource("BoxMesh_iltvi")
+
+[node name="blocos de inimigos 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.00253074, 0, 0.999997, 0, 1, 0, -0.999997, 0, -0.00253074, 42.4569, 0.200511, -31.5433)
+mesh = SubResource("BoxMesh_eurwp")
+skeleton = NodePath("../blocos de inimigos 2")
+
+[node name="blocos de inimigos 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6707, 0.136825, -39.0758)
+mesh = SubResource("BoxMesh_8lgix")
+
+[node name="blocos de inimigos 5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5353, 1.21348, -40.3994)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5353, 1.21348, -41.3606)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5353, 1.21348, -42.3416)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5353, 1.21348, -43.2987)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5356, 1.21348, -41.1588)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5356, 1.21348, -42.12)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5356, 1.21348, -43.101)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 12" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5356, 1.21348, -44.0581)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 13" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5353, 2.18333, -40.3994)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 14" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5353, 2.18333, -41.3606)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 15" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5353, 2.18333, -42.3416)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 16" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5353, 2.18333, -43.2987)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 17" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4882, 1.08394, -39.3958)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 18" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4882, 1.08394, -40.3571)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 19" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4882, 1.08394, -41.338)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 20" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4882, 1.08394, -42.2951)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 21" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4006, 1.21348, -21.2202)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 22" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4006, 1.21348, -22.1815)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 23" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4006, 1.21348, -23.1625)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 24" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4006, 1.21348, -24.1195)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 25" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.4009, 1.21348, -21.9796)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 26" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.4009, 1.21348, -22.9408)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 27" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.4009, 1.21348, -23.9218)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 28" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.4009, 1.21348, -24.8789)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 29" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4006, 2.18333, -21.2202)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 30" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4006, 2.18333, -22.1815)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 31" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4006, 2.18333, -23.1625)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 32" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4006, 2.18333, -24.1195)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 33" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.3535, 1.08394, -20.2166)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 34" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.3535, 1.08394, -21.1779)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 35" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.3535, 1.08394, -22.1589)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 36" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.3535, 1.08394, -23.116)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 37" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779752, 1.21348, -40.3571)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 38" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779752, 1.21348, -41.3184)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 39" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779752, 1.21348, -42.2993)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 40" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779752, 1.21348, -43.2564)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 41" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.219909, 1.21348, -41.1165)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 42" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.219909, 1.21348, -42.0777)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 43" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.219909, 1.21348, -43.0587)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 44" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.219909, 1.21348, -44.0158)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 45" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779752, 2.18333, -40.3571)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 46" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779752, 2.18333, -41.3184)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 47" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779752, 2.18333, -42.2993)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 48" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779752, 2.18333, -43.2564)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 49" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73269, 1.08394, -39.3535)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 50" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73269, 1.08394, -40.3148)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 51" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73269, 1.08394, -41.2958)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 52" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73269, 1.08394, -42.2528)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 53" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5953, 1.21348, -34.4347)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 54" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5953, 1.21348, -35.3959)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 55" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5953, 1.21348, -36.3769)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 56" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5953, 1.21348, -37.334)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 57" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5956, 1.21348, -35.194)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 58" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5956, 1.21348, -36.1553)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 59" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5956, 1.21348, -37.1363)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 60" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5956, 1.21348, -38.0934)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 61" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5953, 2.18333, -34.4347)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 62" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5953, 2.18333, -35.3959)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 63" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.6063, 2.18333, -36.3342)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 64" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5953, 2.18333, -37.334)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 65" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5482, 1.08394, -33.4311)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 66" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5482, 1.08394, -34.3923)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 67" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5482, 1.08394, -35.3733)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="blocos de inimigos 68" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5482, 1.08394, -36.3304)
+mesh = SubResource("BoxMesh_eiodd")
+skeleton = NodePath("../blocos de inimigos 4")
+
+[node name="tronco dos inimigos 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3697, 2.19821, -30.4486)
+mesh = SubResource("BoxMesh_5sxgq")
+
+[node name="tronco dos inimigos 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9403, 2.19821, -31.4925)
+mesh = SubResource("BoxMesh_5sxgq")
+
+[node name="tronco dos inimigos 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7773, 2.19821, -43.9642)
+mesh = SubResource("BoxMesh_5sxgq")
+
+[node name="tronco dos inimigos 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 46.3679, 4.2286, -29.8041)
+mesh = SubResource("BoxMesh_bbh36")
+
+[node name="tronco dos inimigos 5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 33.7733, 4.19341, -43.3335)
+mesh = SubResource("BoxMesh_bbh36")
+
+[node name="tronco dos inimigos 6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 14.9439, 4.19653, -30.8639)
+mesh = SubResource("BoxMesh_bbh36")
+
+[node name="tronco dos inimigos 7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3697, 4.84704, -30.4486)
+mesh = SubResource("BoxMesh_5sxgq")
+
+[node name="tronco dos inimigos 8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9286, 4.84704, -31.4954)
+mesh = SubResource("BoxMesh_5sxgq")
+
+[node name="tronco dos inimigos 9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.8076, 4.76042, -43.9812)
+mesh = SubResource("BoxMesh_5sxgq")
+
+[node name="tronco dos inimigos 10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.707107, -0.707107, 0, 0.707107, -0.707107, 46.3737, 5.601, -31.1886)
+mesh = SubResource("BoxMesh_bbh36")
+
+[node name="tronco dos inimigos 11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.707107, -0.707107, 0, 0.707107, -0.707107, 14.9103, 5.601, -32.1421)
+mesh = SubResource("BoxMesh_bbh36")
+
+[node name="tronco dos inimigos 12" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.707107, -0.707107, 0, 0.707107, -0.707107, 33.8413, 5.601, -44.5821)
+mesh = SubResource("BoxMesh_bbh36")
+
+[node name="bloco do boss 1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.0647, -0.0364709, 0.14669)
+mesh = SubResource("BoxMesh_ittki")
+skeleton = NodePath("")
+
+[node name="bloco de boss 2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -31.5365, 1.5487, 8.59163)
+mesh = SubResource("BoxMesh_ubtkm")
+skeleton = NodePath("../bloco do boss 1")
+
+[node name="bloco de boss 3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -31.7894, 1.5487, -7.97843)
+mesh = SubResource("BoxMesh_ubtkm")
+skeleton = NodePath("../bloco do boss 1")
+
+[node name="bloco de boss 4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -46.1562, 1.5487, -7.82481)
+mesh = SubResource("BoxMesh_ubtkm")
+skeleton = NodePath("../bloco do boss 1")
+
+[node name="bloco de boss 5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -46.833, 1.5487, 8.56046)
+mesh = SubResource("BoxMesh_ubtkm")
+skeleton = NodePath("../bloco do boss 1")
+
+[node name="bridge_stoneRound" parent="." instance=ExtResource("1_2y7lp")]
+transform = Transform3D(10, 0, 0, 0, 5.024, 0, 0, 0, 5.024, -16.0626, 0.229388, -0.0206337)
+
+[node name="canoe_paddle" parent="." instance=ExtResource("2_8ob1v")]
+transform = Transform3D(-1.41421, -1.22474, -0.707107, -8.74228e-08, -1, 1.73205, -1.41421, 1.22475, 0.707107, 9.95653, 1.00157, 0.853001)
